@@ -102,6 +102,23 @@
     font-size: 12px; background: #f5f8f6; color: #2a7c4f; padding: 1px 5px; border-radius: 4px;
   }
   .foot { margin-top: 28px; font-size: 11px; color: #ccc; letter-spacing: -0.01em; }
+
+  .note { font-size: 12px; color: #aaa; letter-spacing: -0.01em; margin: -8px 0 14px; }
+
+  .tt { width: 100%; border-collapse: collapse; }
+  .tt th, .tt td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #f2f2f2; letter-spacing: -0.01em; font-size: 13px; }
+  .tt th { font-size: 11px; font-weight: 600; color: #aaa; text-transform: uppercase; letter-spacing: 0.06em; }
+  .tt td.tok { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #48aa66; }
+  .tt td.num { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #333; }
+  .tt td.old { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: #aaa; }
+  .tt td.role { color: #555; }
+
+  pre.code {
+    background: #f7f9f8; border: 1px solid #eee; border-radius: 10px;
+    padding: 16px 18px; overflow-x: auto;
+    font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 1.75; color: #2a3b32;
+  }
+  pre.code .g { color: #48aa66; }
 </style>
 </head>
 <body>
@@ -136,6 +153,7 @@
   <!-- Type scale -->
   <div class="section">
     <div class="section-title">Type scale</div>
+    <div class="note">아래 견본은 ≥1600px(2xl) 기준 크기입니다. base 크기는 다음 섹션 참고.</div>
 
     <div class="row">
       <div class="meta">
@@ -204,17 +222,17 @@
     <div class="row">
       <div class="meta">
         <div class="name">Caption</div>
-        <div class="specs"><span class="token">text-caption</span><br>13px · Regular 400<br>LH 150% · -1%</div>
+        <div class="specs"><span class="token">text-caption</span><br>12px · Regular 400<br>LH 150% · -1%</div>
       </div>
-      <div class="sample" style="font-size:13px; font-weight:400; line-height:1.5; letter-spacing:-0.01em; color:#757575;">특수조건-J,K,P / H-특수조건 · 제품 등록일 2026-06-08</div>
+      <div class="sample" style="font-size:12px; font-weight:400; line-height:1.5; letter-spacing:-0.01em; color:#757575;">특수조건-J,K,P / H-특수조건 · 제품 등록일 2026-06-08</div>
     </div>
 
     <div class="row">
       <div class="meta">
         <div class="name">Caption Small</div>
-        <div class="specs"><span class="token">text-caption-sm</span><br>12px · Regular 400<br>LH 150% · -1%</div>
+        <div class="specs"><span class="token">text-caption-sm</span><br>11px · Regular 400<br>LH 150% · -1%</div>
       </div>
-      <div class="sample" style="font-size:12px; font-weight:400; line-height:1.5; letter-spacing:-0.01em; color:#979797;">MSDS 제·개정일 · 마지막 수정 2026-06-08</div>
+      <div class="sample" style="font-size:11px; font-weight:400; line-height:1.5; letter-spacing:-0.01em; color:#979797;">MSDS 제·개정일 · 마지막 수정 2026-06-08</div>
     </div>
   </div>
 
@@ -227,11 +245,75 @@
       <li>line-height는 제목 <code>130%</code>, 본문 <code>170%</code>, 캡션 <code>150%</code>로 고정.</li>
       <li>한글 자간(letter-spacing)은 <code>-1%</code> 기본, 20px 이상 큰 제목은 <code>-2%</code>.</li>
       <li>소수점 폰트 크기(<code>13.97px</code>, <code>15.96px</code> 등) 사용 금지 — 위 정수 토큰만 사용.</li>
-      <li>화면 폭별 크기 변경이 필요하면 임의값 대신 <code>clamp()</code>로 처리.</li>
+      <li>반응형은 요소별 임의 배율 대신 <code>base</code> + <code>≥1600px(2xl)</code> 토큰 한 쌍으로 통일.</li>
     </ul>
   </div>
 
-  <div class="foot">SIHM · Pretendard typography · 10 tokens / 4 weights</div>
+  <!-- Responsive sizes -->
+  <div class="section">
+    <div class="section-title">반응형 크기 · base / ≥1600px</div>
+    <table class="tt">
+      <thead><tr><th>토큰</th><th>base</th><th>≥1600px</th><th>weight</th><th>line-height</th></tr></thead>
+      <tbody>
+        <tr><td class="tok">text-display</td><td class="num">24</td><td class="num">30</td><td>700</td><td>120%</td></tr>
+        <tr><td class="tok">text-heading1</td><td class="num">18</td><td class="num">24</td><td>700</td><td>130%</td></tr>
+        <tr><td class="tok">text-heading2</td><td class="num">15</td><td class="num">20</td><td>600</td><td>130%</td></tr>
+        <tr><td class="tok">text-heading3</td><td class="num">14</td><td class="num">18</td><td>600</td><td>130%</td></tr>
+        <tr><td class="tok">text-heading4</td><td class="num">13</td><td class="num">17</td><td>600</td><td>130%</td></tr>
+        <tr><td class="tok">text-body-lg</td><td class="num">12</td><td class="num">16</td><td>400</td><td>170%</td></tr>
+        <tr><td class="tok">text-body</td><td class="num">11</td><td class="num">15</td><td>400</td><td>170%</td></tr>
+        <tr><td class="tok">text-body-sm</td><td class="num">11</td><td class="num">14</td><td>400</td><td>170%</td></tr>
+        <tr><td class="tok">text-caption</td><td class="num">9</td><td class="num">12</td><td>400</td><td>150%</td></tr>
+        <tr><td class="tok">text-caption-sm</td><td class="num">9</td><td class="num">11</td><td>400</td><td>150%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Tailwind -->
+  <div class="section">
+    <div class="section-title">적용 · Tailwind</div>
+    <div class="note">CSS에 한 번 정의하면 <code style="font-family:'JetBrains Mono',monospace;">text-body</code>처럼 base·2xl이 같이 적용됩니다.</div>
+    <pre class="code">@layer components {
+  .text-display    { <span class="g">@apply</span> text-[24px] 2xl:text-[30px]; }
+  .text-heading1   { <span class="g">@apply</span> text-[18px] 2xl:text-[24px]; }
+  .text-heading2   { <span class="g">@apply</span> text-[15px] 2xl:text-[20px]; }
+  .text-heading3   { <span class="g">@apply</span> text-[14px] 2xl:text-[18px]; }
+  .text-heading4   { <span class="g">@apply</span> text-[13px] 2xl:text-[17px]; }
+  .text-body-lg    { <span class="g">@apply</span> text-[12px] 2xl:text-[16px]; }
+  .text-body       { <span class="g">@apply</span> text-[11px] 2xl:text-[15px]; }
+  .text-body-sm    { <span class="g">@apply</span> text-[11px] 2xl:text-[14px]; }
+  .text-caption    { <span class="g">@apply</span> text-[9px]  2xl:text-[12px]; }
+  .text-caption-sm { <span class="g">@apply</span> text-[9px]  2xl:text-[11px]; }
+}</pre>
+  </div>
+
+  <!-- Migration mapping -->
+  <div class="section">
+    <div class="section-title">마이그레이션 매핑 · 규제 물질 목록 화면</div>
+    <div class="note">현재 클래스를 찾아 토큰으로 치환하세요.</div>
+    <table class="tt">
+      <thead><tr><th>현재 클래스</th><th>→ 토큰</th><th>역할</th></tr></thead>
+      <tbody>
+        <tr><td class="old">text-[15px] 2xl:text-[20px]</td><td class="tok">text-heading2</td><td class="role">페이지 제목</td></tr>
+        <tr><td class="old">text-[12.6/12.8px] 2xl:text-[17px]</td><td class="tok">text-heading4</td><td class="role">상단 탭</td></tr>
+        <tr><td class="old">text-[12px] 2xl:text-[15px]</td><td class="tok">text-body</td><td class="role">사이드바 그룹명</td></tr>
+        <tr><td class="old">text-[11px] 2xl:text-[15px]</td><td class="tok">text-body</td><td class="role">표 헤더 · 셀</td></tr>
+        <tr><td class="old">text-[11.3px] 2xl:text-[15px]</td><td class="tok">text-body</td><td class="role">사용자명</td></tr>
+        <tr><td class="old">text-[10px] 2xl:text-[15px]</td><td class="tok">text-body</td><td class="role">검색창 · 엑셀 버튼</td></tr>
+        <tr><td class="old">text-[11.5px] 2xl:text-[14.5px]</td><td class="tok">text-body-sm</td><td class="role">사이드바 서브메뉴</td></tr>
+        <tr><td class="old">text-[11px] 2xl:text-[14.63px]</td><td class="tok">text-body-sm</td><td class="role">부서 목록 헤더</td></tr>
+        <tr><td class="old">text-[10.5px] 2xl:text-[13.97px]</td><td class="tok">text-body-sm</td><td class="role">부서 트리 항목</td></tr>
+        <tr><td class="old">text-[10.5px] 2xl:text-[14px]</td><td class="tok">text-body-sm</td><td class="role">안내문구 △</td></tr>
+        <tr><td class="old">text-[11px] 2xl:text-sm</td><td class="tok">text-body-sm</td><td class="role">드롭다운 메뉴</td></tr>
+        <tr><td class="old">text-[9px] 2xl:text-[12px]</td><td class="tok">text-caption</td><td class="role">표 헤더(작은 칸)</td></tr>
+        <tr><td class="old">text-[10px] 2xl:text-xs</td><td class="tok">text-caption</td><td class="role">사이드바 버전</td></tr>
+        <tr><td class="old">text-[9px]</td><td class="tok">text-caption-sm</td><td class="role">select 옵션</td></tr>
+        <tr><td class="old">text-[10px]</td><td class="tok">text-caption-sm</td><td class="role">펼침 화살표</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="foot">SIHM · Pretendard typography · 10 tokens / 4 weights / 2 breakpoints</div>
 
 </body>
 </html>

@@ -32,7 +32,9 @@ https://doyeon-herlab.github.io/typography/
 | `text-body-lg`     | 16px | 400 | 170% | -1% |
 | `text-body`        | 15px | 400 | 170% | -1% |
 | `text-body-sm`     | 14px | 400 | 170% | -1% |
-| `text-caption`     | 13px | 400 | 150% | -1% |
-| `text-caption-sm`  | 12px | 400 | 150% | -1% |
+| `text-caption`     | 12px | 400 | 150% | -1% |
+| `text-caption-sm`  | 11px | 400 | 150% | -1% |
+
+> 위 size는 ≥1600px(2xl) 기준입니다. base 크기와 마이그레이션 매핑은 페이지를 참고하세요.
 
 Pretendard 웹폰트는 jsDelivr CDN에서 불러옵니다(설치 불필요).
