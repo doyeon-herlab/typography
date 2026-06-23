@@ -246,6 +246,7 @@
       <li>한글 자간(letter-spacing)은 <code>-1%</code> 기본, 20px 이상 큰 제목은 <code>-2%</code>.</li>
       <li>소수점 폰트 크기(<code>13.97px</code>, <code>15.96px</code> 등) 사용 금지 — 위 정수 토큰만 사용.</li>
       <li>반응형은 요소별 임의 배율 대신 <code>base</code> + <code>≥1600px(2xl)</code> 토큰 한 쌍으로 통일.</li>
+      <li>모든 모듈(화학물질·근골격계) 공통 — 고정 크기(<code>text-sm</code>·<code>text-base</code> 등) 금지, 토큰만 사용.</li>
     </ul>
   </div>
 
@@ -337,7 +338,7 @@
   <!-- Musculo module mapping -->
   <div class="section">
     <div class="section-title">마이그레이션 매핑 · 근골격계 모듈 (설문/결과 모달)</div>
-    <div class="note">⚠️ 이 모듈은 <b style="font-weight:500;">고정 크기</b>(text-sm/text-base)와 <b style="font-weight:500;">반응형</b>(13px 2xl:16px 등)을 <b style="font-weight:500;">한 모달 안에서도 섞어</b> 씀 — 화학물질 모듈(일관된 base→2xl)보다 더 들쭉날쭉. 토큰으로 통일하면 고정 텍스트도 &lt;1600px에서 작아짐(의도 확인 필요).</div>
+    <div class="note">✅ 결정: <b style="font-weight:500;">모든 모듈을 반응형 토큰으로 통일.</b> 아래 고정 크기(text-sm/text-base/text-[15px])도 base→2xl 토큰으로 교체 → &lt;1600px에서는 base 크기로 표시됨. 고정 크기 신규 사용 금지.</div>
     <table class="tt">
       <thead><tr><th>현재 클래스</th><th>→ 토큰</th><th>역할</th></tr></thead>
       <tbody>
