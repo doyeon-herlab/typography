@@ -289,8 +289,8 @@
 
   <!-- Migration mapping -->
   <div class="section">
-    <div class="section-title">마이그레이션 매핑 · 규제 물질 목록 화면</div>
-    <div class="note">현재 클래스를 찾아 토큰으로 치환하세요.</div>
+    <div class="section-title">마이그레이션 매핑 · 목록 화면 공통 (규제·고독성 등)</div>
+    <div class="note">현재 클래스를 찾아 토큰으로 치환하세요. 표 헤더는 화면마다 9/12·11/15로 갈리는데 <code style="font-family:'JetBrains Mono',monospace;">text-body</code>로 통일하고, 칸이 좁아 줄여야 할 때만 <code style="font-family:'JetBrains Mono',monospace;">text-caption</code>을 씁니다.</div>
     <table class="tt">
       <thead><tr><th>현재 클래스</th><th>→ 토큰</th><th>역할</th></tr></thead>
       <tbody>
@@ -305,10 +305,11 @@
         <tr><td class="old">text-[10.5px] 2xl:text-[13.97px]</td><td class="tok">text-body-sm</td><td class="role">부서 트리 항목</td></tr>
         <tr><td class="old">text-[10.5px] 2xl:text-[14px]</td><td class="tok">text-body-sm</td><td class="role">안내문구 △</td></tr>
         <tr><td class="old">text-[11px] 2xl:text-sm</td><td class="tok">text-body-sm</td><td class="role">드롭다운 메뉴</td></tr>
-        <tr><td class="old">text-[9px] 2xl:text-[12px]</td><td class="tok">text-caption</td><td class="role">표 헤더(작은 칸)</td></tr>
+        <tr><td class="old">text-[11px] 2xl:text-[15px]</td><td class="tok">text-body</td><td class="role">표 헤더(넓은 칸)</td></tr>
+        <tr><td class="old">text-[9px] 2xl:text-[12px]</td><td class="tok">text-caption</td><td class="role">표 헤더(좁은 칸)</td></tr>
         <tr><td class="old">text-[10px] 2xl:text-xs</td><td class="tok">text-caption</td><td class="role">사이드바 버전</td></tr>
-        <tr><td class="old">text-[9px]</td><td class="tok">text-caption-sm</td><td class="role">select 옵션</td></tr>
-        <tr><td class="old">text-[10px]</td><td class="tok">text-caption-sm</td><td class="role">펼침 화살표</td></tr>
+        <tr><td class="old">text-[9px] / text-[11px]</td><td class="tok">text-caption</td><td class="role">헤더 필터 select</td></tr>
+        <tr><td class="old">text-[10px]</td><td class="tok">text-caption-sm</td><td class="role">펼침 화살표 ▶</td></tr>
       </tbody>
     </table>
   </div>
