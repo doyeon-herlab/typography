@@ -337,15 +337,17 @@
   <!-- Musculo module mapping -->
   <div class="section">
     <div class="section-title">마이그레이션 매핑 · 근골격계 모듈 (설문/결과 모달)</div>
-    <div class="note">⚠️ 이 모듈은 <code style="font-family:'JetBrains Mono',monospace;">2xl</code> 반응형 없이 <b style="font-weight:500;">고정 크기</b>를 씀 — 화학물질 모듈(base→2xl 확대)과 동작이 다름. 토큰으로 통일하면 &lt;1600px에서도 같이 작아짐(의도 확인 필요).</div>
+    <div class="note">⚠️ 이 모듈은 <b style="font-weight:500;">고정 크기</b>(text-sm/text-base)와 <b style="font-weight:500;">반응형</b>(13px 2xl:16px 등)을 <b style="font-weight:500;">한 모달 안에서도 섞어</b> 씀 — 화학물질 모듈(일관된 base→2xl)보다 더 들쭉날쭉. 토큰으로 통일하면 고정 텍스트도 &lt;1600px에서 작아짐(의도 확인 필요).</div>
     <table class="tt">
       <thead><tr><th>현재 클래스</th><th>→ 토큰</th><th>역할</th></tr></thead>
       <tbody>
         <tr><td class="old">text-[15px] 2xl:text-[20px]</td><td class="tok">text-heading2</td><td class="role">모달 제목 (700)</td></tr>
         <tr><td class="old">text-base (16, 고정)</td><td class="tok">text-body-lg</td><td class="role">콘텐츠 헤더 h4 (600)</td></tr>
         <tr><td class="old">text-[15px] (고정)</td><td class="tok">text-body</td><td class="role">사이드바 항목 · 질문 · 옵션 라벨</td></tr>
-        <tr><td class="old">text-sm (14, 고정)</td><td class="tok">text-body-sm</td><td class="role">사이드바 섹션 라벨 · 그룹명 (600)</td></tr>
-        <tr><td class="old">text-[10px] 2xl:text-[15px]</td><td class="tok">text-body</td><td class="role">모달 버튼(닫기)</td></tr>
+        <tr><td class="old">text-sm (14, 고정)</td><td class="tok">text-body-sm</td><td class="role">사이드바 섹션 라벨 · 도움말 (고정)</td></tr>
+        <tr><td class="old">text-[13px] 2xl:text-[16px]</td><td class="tok">text-body-lg</td><td class="role">토글 · 아코디언 라벨 (반응형)</td></tr>
+        <tr><td class="old">text-xs 2xl:text-sm</td><td class="tok">text-body-sm</td><td class="role">인라인 카운트 (n개) (반응형)</td></tr>
+        <tr><td class="old">text-[10px] 2xl:text-[15px]</td><td class="tok">text-body</td><td class="role">모달 버튼(닫기·저장·복사) · URL 인풋</td></tr>
       </tbody>
     </table>
   </div>
